@@ -5,7 +5,8 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     private Transform myTransform;
-
+    [SerializeField] private int ammount;
+    [SerializeField] private PichUpType type;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +24,30 @@ public class PickUp : MonoBehaviour
     {
         if (other.gameObject.tag == "player")
         {
-
-            //A faire 
-            //Ecire le code qui affect le joueur
+            switch (type) {
+                case PichUpType.Ammo:
+                    if (other.gameObject.GetComponentInChildren<GunScript>()) {
+                        other.gameObject.GetComponentInChildren<GunScript>().AddAmmo(ammount);
+                    }
+                    break;
+                case PichUpType.Health:
+                    if (other.gameObject.GetComponent<PlayerHealth>())
+                    {
+                        other.gameObject.GetComponent<PlayerHealth>().AddHealth(ammount);
+                    }
+                    break;
+                case PichUpType.Defense:
+                    //ToDo
+                    break;
+                case PichUpType.Power:
+                    //ToDo
+                    break;
+            }
             Destroy(this.gameObject);
         }
     }
+}
+
+internal enum PichUpType{
+    Ammo,Health,Power,Defense
 }

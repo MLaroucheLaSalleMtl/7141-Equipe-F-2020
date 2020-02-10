@@ -2,25 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunScript : MonoBehaviour
-{
-    [SerializeField] private float GunDamage = 10f;
-    [SerializeField] private float GunRange = 150f;
-    [SerializeField] private Camera FpsCam;
+public class GunScript : GunFactory
+{ 
+
+    [SerializeField] private new float Damage = 10f;
+    [SerializeField] private new int Ammo = 100;
+    [SerializeField] private GameObject Beam;
+
+    // [SerializeField] private Camera FpsCam;
+    private void Start()
+    {
+        Damage = 10f;
+        Ammo = 100;
+    }
+
+    protected override void Shoot( )
+    {
+        Beam.SetActive(true);
+    }
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1") && Ammo >= 1)
         {
-            Shoot();
+            Shoot( );
+
         }
 
-    }
-    private void Shoot()
-    {
-        RaycastHit Hit;
-        if(Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out Hit, GunRange))
+        if(Input.GetButtonUp("Fire1"))
         {
-            Debug.Log(Hit.transform.name);
+            Beam.SetActive(false);
         }
     }
+
+    public void AddAmmo(int nbAmmo) {
+        Ammo += nbAmmo;
+    }
+
+
 }

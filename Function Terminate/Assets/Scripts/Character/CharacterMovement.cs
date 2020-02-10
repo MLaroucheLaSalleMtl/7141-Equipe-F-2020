@@ -20,11 +20,11 @@ public class CharacterMovement : MonoBehaviour
     public bool IsSprinting = false;
     private void Jump()
     {
-        Velocity.y = Mathf.Sqrt(JumpPower * 2f * Gravity);
+        Velocity.y = Mathf.Sqrt(JumpPower * -2f * -Gravity);
     }
     private void SuperJump()
     {
-        Velocity.y = Mathf.Sqrt(SuperJumpPower * 2f * Gravity);
+        Velocity.y = Mathf.Sqrt(SuperJumpPower * -2f * -Gravity);
     }
     private void Check()
     {
@@ -37,32 +37,33 @@ public class CharacterMovement : MonoBehaviour
     }
     private void Movement()
     {
-
+       
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        
-        Vector3 move = transform.right * x + transform.forward * z;
+       
+        Vector3 move= transform.right * x + transform.forward * z;
+       
 
         Controller.Move(move * CurrentSpeed * Time.deltaTime);
     }
     private void Sprint()
     {
-       
+        CurrentSpeed = SprintSpeed;
 
     }
     private void Update()
     {
         Check();
-
+        CurrentSpeed = MovementSpeed;
         Movement();
-
-        if (Input.GetButton("Sprint") && IsGrounded==true && IsSprinting==false)
+       
+        if (Input.GetButtonDown("Sprint") && IsGrounded==true )
         {
-            CurrentSpeed = SprintSpeed;
+            Sprint();
             IsSprinting = true;
  
         }
-        else
+        if (Input.GetButtonUp("Sprint") )
         {
             CurrentSpeed = MovementSpeed;
             IsSprinting = false;

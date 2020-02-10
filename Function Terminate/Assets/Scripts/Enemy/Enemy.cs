@@ -14,6 +14,34 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float agentSpeed = 10f;
 
 
+    // enemy hp
+    [SerializeField] private int hp = 150;
+
+    // enemy damage 1/4 player's max health ?
+    [SerializeField] private int damage = 100;
+
+    // enemy name - Enemy number / level number 
+    private string enemyName = "e1lvl1";
+
+    private PlayerHealth player;
+
+    public int Hp { get => hp; set => hp = value; }
+    public int Damage { get => damage; set => damage = value; }
+
+
+    // enemy take damage function
+    public void TakeDamage(int damage)
+    {
+        this.Hp -= damage;
+    }
+
+    // check if the enemy is dead
+    public bool IsDead()
+    {
+        return (this.hp <= 0);
+    }
+
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -65,7 +93,6 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger declanché");
         // the bot radar detects the player
         if (other.gameObject.tag == "player")
         {
@@ -74,6 +101,11 @@ public class Enemy : MonoBehaviour
             // the bot chases the player
             hasDetected = true;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
     }
 
 
