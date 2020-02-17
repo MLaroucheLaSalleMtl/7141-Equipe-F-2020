@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class GunScript : GunFactory
 { 
-
-    [SerializeField] private new float Damage = 10f;
-    [SerializeField] private new int Ammo = 100;
+   
     [SerializeField] private GameObject Beam;
 
-    // [SerializeField] private Camera FpsCam;
     private void Start()
     {
         Damage = 10f;
@@ -20,18 +17,27 @@ public class GunScript : GunFactory
     {
         Beam.SetActive(true);
     }
+    private void DecreaseAmmo()
+    {
+        Ammo--;
+       
+    }
     void Update()
     {
         if (Input.GetButton("Fire1") && Ammo >= 1)
         {
             Shoot( );
+            InvokeRepeating("DecreaseAmmo", .5f, .5f);
+            Debug.Log(Ammo);
 
         }
 
         if(Input.GetButtonUp("Fire1"))
         {
             Beam.SetActive(false);
+            CancelInvoke("DecreaseAmmo");
         }
+        
     }
 
     public void AddAmmo(int nbAmmo) {

@@ -47,6 +47,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3430238125502684288, guid: e7bfe9ae2ab55054bbd99b9b7ccdd6d0,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4813616426157206887, guid: e7bfe9ae2ab55054bbd99b9b7ccdd6d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -117,6 +122,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2914899386614191867}
     m_Modifications:
+    - target: {fileID: 2196122304370695824, guid: 34d8eb40d69308e4c826be859f60226b,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6144569029257702674, guid: 34d8eb40d69308e4c826be859f60226b,
         type: 3}
       propertyPath: m_Name
@@ -177,6 +187,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6144569029607845157, guid: 34d8eb40d69308e4c826be859f60226b,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144569029857392058, guid: 34d8eb40d69308e4c826be859f60226b,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144569030071431726, guid: 34d8eb40d69308e4c826be859f60226b,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144569030131894505, guid: 34d8eb40d69308e4c826be859f60226b,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144569031008134574, guid: 34d8eb40d69308e4c826be859f60226b,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34d8eb40d69308e4c826be859f60226b, type: 3}
 --- !u!4 &6985051316363517804 stripped
@@ -192,6 +227,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2914899386614191867}
     m_Modifications:
+    - target: {fileID: 1768576100647885145, guid: 480e17cc676911f4ba3e527d53ecd013,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768576101209090715, guid: 480e17cc676911f4ba3e527d53ecd013,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4035761068248507468, guid: 480e17cc676911f4ba3e527d53ecd013,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -247,6 +292,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5496761397610818150, guid: 480e17cc676911f4ba3e527d53ecd013,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7872527302341490678, guid: 480e17cc676911f4ba3e527d53ecd013,
         type: 3}
       propertyPath: m_Name
@@ -271,6 +321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MediumWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430238125502684288, guid: e7bfe9ae2ab55054bbd99b9b7ccdd6d0,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4813616426157206887, guid: e7bfe9ae2ab55054bbd99b9b7ccdd6d0,
         type: 3}
@@ -342,6 +397,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2914899386614191867}
     m_Modifications:
+    - target: {fileID: 1768576100647885145, guid: 480e17cc676911f4ba3e527d53ecd013,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768576101209090715, guid: 480e17cc676911f4ba3e527d53ecd013,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4035761068248507468, guid: 480e17cc676911f4ba3e527d53ecd013,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -395,6 +460,11 @@ PrefabInstance:
     - target: {fileID: 4035761068248507468, guid: 480e17cc676911f4ba3e527d53ecd013,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5496761397610818150, guid: 480e17cc676911f4ba3e527d53ecd013,
+        type: 3}
+      propertyPath: m_NavMeshLayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7872527302341490678, guid: 480e17cc676911f4ba3e527d53ecd013,

@@ -12,15 +12,17 @@ public class CharacterMovement : MonoBehaviour
     private float CurrentSpeed;
     public CharacterController Controller;
     Vector3 Velocity;
-    private float Gravity = 9.807f;
+    private static float Gravity = 9.807f;
     [SerializeField]private Transform GroundCheck;
     private float GroundDistance = 0.2f;
     public LayerMask GroundMask;
     public bool IsGrounded;
     public bool IsSprinting = false;
+   [SerializeField] float fallPower = 1.5f;
     private void Jump()
     {
         Velocity.y = Mathf.Sqrt(JumpPower * -2f * -Gravity);
+        
     }
     private void SuperJump()
     {
@@ -54,7 +56,7 @@ public class CharacterMovement : MonoBehaviour
     private void Update()
     {
         Check();
-        CurrentSpeed = MovementSpeed;
+        
         Movement();
        
         if (Input.GetButtonDown("Sprint") && IsGrounded==true )
@@ -80,9 +82,14 @@ public class CharacterMovement : MonoBehaviour
             SuperJump();
         }
 
-        Velocity.y += -Gravity * Time.deltaTime;
+        Velocity.y += -Gravity * fallPower * Time.deltaTime;
 
         Controller.Move(Velocity * Time.deltaTime); 
+    }
+
+    private void Start()
+    {
+        CurrentSpeed = MovementSpeed;
     }
 
 }
