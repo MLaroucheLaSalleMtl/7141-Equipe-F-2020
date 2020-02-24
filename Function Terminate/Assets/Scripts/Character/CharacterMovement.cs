@@ -18,7 +18,7 @@ public class CharacterMovement : MonoBehaviour
     public LayerMask GroundMask;
     public bool IsGrounded;
     public bool IsSprinting = false;
-   [SerializeField] float fallPower = 1.5f;
+   [SerializeField] float fallPower =  2f;
     private void Jump()
     {
         Velocity.y = Mathf.Sqrt(JumpPower * -2f * -Gravity);

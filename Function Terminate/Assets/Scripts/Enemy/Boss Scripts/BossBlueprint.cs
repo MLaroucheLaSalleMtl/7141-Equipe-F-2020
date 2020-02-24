@@ -32,6 +32,8 @@ public abstract class BossBlueprint : MonoBehaviour
     protected bool IsMoving { get => isMoving; set => isMoving = value; }
     protected float LookAtWeight { get => lookAtWeight; set => lookAtWeight = value; }
     protected bool IsActive { get => isActive; set => isActive = value; }
+    protected float RateNormalAttack { get => rateNormalAttack; set => rateNormalAttack = value; }
+    protected float RateSpecialAttack { get => rateSpecialAttack; set => rateSpecialAttack = value; }
 
     protected abstract void SpecialAttack();
     protected abstract void Attack();
@@ -52,6 +54,10 @@ public abstract class BossBlueprint : MonoBehaviour
 
     public void TakeDamage(float damageTaken) {
         HealthPoints -= damageTaken;
+    }
+
+    public bool IsActivated() {
+        return isActive;
     }
 
     protected void AddTarget(GameObject target) {

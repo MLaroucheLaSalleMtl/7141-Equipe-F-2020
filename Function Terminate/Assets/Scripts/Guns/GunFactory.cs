@@ -11,7 +11,7 @@ public abstract class GunFactory : MonoBehaviour
 
     protected float Damage { get => damage; set => damage = value; }
     protected float Range { get => range; set => range = value; }
-    protected int Ammo { get => ammo; set => ammo = value; }
+    public int Ammo { get => ammo; set => ammo = value; }
     protected float FireRate { get => fireRate; set => fireRate = value; }
 
     protected abstract void Shoot() ;

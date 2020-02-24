@@ -29,15 +29,35 @@ public class StraightProjectile : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target, speed);
         Destroy(gameObject, .3f);
     }
+
+
     private void OnTriggerEnter(Collider other)
     {
-        
         if (other.gameObject.tag == "player")
         {
-            //Debug.Log("Did Hit");
+            Debug.Log(other.gameObject.name);
+            Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "ground")
+        {
+            Debug.Log("ground");
             Destroy(gameObject);
         }
 
-        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Debug.Log("Collision");
+        if (collision.gameObject.tag == "player")
+        {
+            Debug.Log(collision.gameObject.name);
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "ground")
+        {
+            Debug.Log("ground");
+            Destroy(gameObject);
+        }
     }
 }

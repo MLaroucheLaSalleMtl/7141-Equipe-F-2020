@@ -6,6 +6,8 @@ TagManager:
   tags:
   - player
   - WeakSpot
+  - Damage
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -17,12 +19,12 @@ TagManager:
   - 
   - Ground
   - Damage
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BossTargeting
+  - Player
+  - Enemies
+  - Projectile
+  - Player
+  - Enemy
   - 
   - 
   - 

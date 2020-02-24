@@ -8,7 +8,7 @@ public class BossTriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "player") {
+        if (other.gameObject.tag == "player" && !boss.IsActivated()) {
             boss.TargetPlayer(other.gameObject);
         }
     }
