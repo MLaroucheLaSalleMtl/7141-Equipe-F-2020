@@ -8,6 +8,7 @@ public class EnemyStatic : MonoBehaviour
 
   
     private NavMeshAgent agent;
+    private AudioSource audio;
     [SerializeField] bool hasDetected = false;
     [SerializeField] private Transform target;
     [SerializeField] private float agentSpeed = 10f;
@@ -39,13 +40,13 @@ public class EnemyStatic : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        //fireRate = startFireRate;
+        audio = GetComponent<AudioSource>();
         fireRate = 1f;
         startFireRate = Time.time;
     }
 
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         if (Vector3.Distance(transform.position, target.position) <= DetectionDistance)
         {
@@ -60,7 +61,8 @@ public class EnemyStatic : MonoBehaviour
         if (hasDetected)
         {
             //transform.LookAt(target);
-            Invoke("LookPlayer", 1f);
+            //Invoke("LookPlayer", 1f);
+            transform.LookAt(target);
             Shoot();
         }
     }
@@ -74,7 +76,10 @@ public class EnemyStatic : MonoBehaviour
     {
         if (Time.time > startFireRate)
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            audio.Play();
+            GameObject newProjectile =  Instantiate(projectile, transform.position, Quaternion.identity);
+            newProjectile.transform.LookAt(target.transform);
+            newProjectile.GetComponent<StraightProjectile>().SetDamage(damage);
             startFireRate = Time.time + fireRate;
         }
     }

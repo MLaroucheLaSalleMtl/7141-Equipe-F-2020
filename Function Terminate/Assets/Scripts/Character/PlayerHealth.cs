@@ -5,21 +5,28 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
 
-    [SerializeField] private int maxHealthPoint = 500;
-    [SerializeField] private int currentHealthPoints = 475;
+    [SerializeField] private float maxHealthPoint = 500;
+    [SerializeField] private float currentHealthPoints = 475;
 
-    public int MaxHealthPoint { get => maxHealthPoint; set => maxHealthPoint = value; }
-    public int CurrentHealthPoints { get => currentHealthPoints; set => currentHealthPoints = value; }
+    public float MaxHealthPoint { get => maxHealthPoint; set => maxHealthPoint = value; }
+    public float CurrentHealthPoints { get => currentHealthPoints; set => currentHealthPoints = value; }
 
 
-    public void TakeDamage(int damage) {
+    public void TakeDamage(float damage) {
         CurrentHealthPoints -= damage;
+        if (CurrentHealthPoints <=0) {
+            Death();
+        }
     }
 
     public void AddHealth(int healing) {
         if ((CurrentHealthPoints += healing) > MaxHealthPoint) {
             CurrentHealthPoints = MaxHealthPoint;
         }
+    }
+
+    private void Death() {
+
     }
 
     // Start is called before the first frame update

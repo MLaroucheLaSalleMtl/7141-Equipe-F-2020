@@ -7,8 +7,9 @@ public class BossLaserAbility : MonoBehaviour
 {
     [SerializeField] private GameObject targeting;
     [SerializeField] private Transform[] targetingFieldPoints;
-    [SerializeField] private GameObject maxRangeTrigger;
+    [SerializeField] private GameObject mainBody;
 
+    private AudioSource audio;
     private GameObject target;
     private bool isFiring = false;
 
@@ -26,6 +27,7 @@ public class BossLaserAbility : MonoBehaviour
 
     public void StartFiring(float _firerate,float _damage, GameObject _target) {
         laser = GetComponent<LineRenderer>();
+        audio = GetComponent<AudioSource>();
         laser.enabled = false;
         FireRate = _firerate;
         Damage = _damage;
@@ -41,7 +43,7 @@ public class BossLaserAbility : MonoBehaviour
         PointsCheck();
         if (IsFiring)
         {
-            
+            //CheckAngle();
             RangeCheck();
         }
     }
@@ -73,6 +75,17 @@ public class BossLaserAbility : MonoBehaviour
             }
         }
      }
+
+    private void CheckAngle() {
+        float mainBodyY = mainBody.transform.rotation.y;
+        float targetingY = targeting.transform.rotation.y;
+        float angleallowed = (1-Mathf.Sin(45));
+        if (Mathf.Abs(targetingY - mainBodyY) >= angleallowed )
+        {
+            Debug.Log("Target behind boss");
+            isFiring = false;
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -108,13 +121,15 @@ public class BossLaserAbility : MonoBehaviour
         
         RaycastHit hit;
         Ray laserDirection =  new Ray(targeting.transform.position, targeting.transform.forward);
+        audio.Play();
         if (Physics.Raycast(laserDirection, out hit,100f, (1 << LayerMask.NameToLayer("Player")| 1 << LayerMask.NameToLayer("Ground"))))
         {
             Shootlaser(hit.distance);
             if (hit.collider.gameObject.tag == "player")
             {
-                //Coder les interaction entre le player et le laser
-                Debug.Log("Player Hit");
+                if (hit.collider.gameObject.GetComponent<PlayerHealth>()) {
+                    hit.collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+                }
             }
         }
     }
