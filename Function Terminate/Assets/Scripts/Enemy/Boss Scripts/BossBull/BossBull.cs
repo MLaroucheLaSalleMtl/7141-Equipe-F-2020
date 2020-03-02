@@ -5,6 +5,7 @@ using UnityEngine.AI;
 using UnityEngine.Animations;
 
 public class BossBull : BossBlueprint {
+
     [SerializeField] private AudioClip[] sounds;
     [SerializeField] private GameObject mainBody;
     [SerializeField] private Transform destination;

@@ -17,7 +17,7 @@ public class EnemyStatic : MonoBehaviour
     [SerializeField] private float DetectionDistance = 10f;
     [SerializeField] private GameObject projectile;
     // enemy hp
-    [SerializeField] private int hp = 150;
+    [SerializeField] private float hp = 150;
     // enemy damage 1/4 player's max health ?
     [SerializeField] private int damage = 100;
 
@@ -25,9 +25,14 @@ public class EnemyStatic : MonoBehaviour
 
 
     // enemy take damage function
-    public void TakeDamage(int damage)
+    public void TakeDamage(float Damage)
     {
-        this.hp -= damage;
+        this.hp -= Damage;
+        if (IsDead())
+        {
+            Destroy(this.gameObject);
+
+        }
     }
 
     // check if the enemy is dead

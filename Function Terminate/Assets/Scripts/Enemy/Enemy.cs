@@ -5,7 +5,7 @@ using System.Collections;
 
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] private int hp;
+    [SerializeField] private float hp;
     [SerializeField] private int damage;
     [SerializeField] private bool hasDetected = false;
     [SerializeField] private Transform target;
@@ -17,7 +17,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private float startFireRate;
     [SerializeField] private GameObject projectile;
 
-    public int Hp { get => hp; set => hp = value; }
+    public float Hp { get => hp; set => hp = value; }
     public int Damage { get => damage; set => damage = value; }
     public bool HasDetected { get => hasDetected; set => hasDetected = value; }
     public Transform Target { get => target; set => target = value; }
@@ -30,7 +30,7 @@ public abstract class Enemy : MonoBehaviour
     public GameObject Projectile { get => projectile; set => projectile = value; }
 
     // enemy take damage function
-    public abstract void TakeDamage(int damage);
+    public abstract void TakeDamage(float Damage);
 
     public abstract bool IsDead();
 

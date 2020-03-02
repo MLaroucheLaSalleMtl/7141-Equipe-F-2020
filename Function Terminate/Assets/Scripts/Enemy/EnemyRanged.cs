@@ -46,9 +46,14 @@ public class EnemyRanged : Enemy
     }
 
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(float Damage)
     {
-        Hp -= damage;
+        Hp -= Damage;
+        if (IsDead())
+        {
+            Destroy(this.gameObject);
+
+        }
     }
 
     public override bool IsDead()
@@ -88,10 +93,12 @@ public class EnemyRanged : Enemy
         }
         else
         {
-            agent.speed = AgentSpeed;
-            agent.destination = points[destPoint].position;
-            if (!agent.pathPending && agent.remainingDistance < 0.5f)
-                GotoNextPoint();
+            if (points.Length > 0) {
+                agent.speed = AgentSpeed;
+                agent.destination = points[destPoint].position;
+                if (!agent.pathPending && agent.remainingDistance < 0.5f)
+                    GotoNextPoint();
+            }
         }
     }
 

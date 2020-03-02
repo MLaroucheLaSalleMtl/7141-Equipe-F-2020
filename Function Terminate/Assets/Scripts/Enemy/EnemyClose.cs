@@ -24,9 +24,9 @@ public class EnemyClose : Enemy
     }
 
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(float Damage)
     {
-        Hp -= damage;
+        Hp -= Damage;
     }
 
     public override bool IsDead()

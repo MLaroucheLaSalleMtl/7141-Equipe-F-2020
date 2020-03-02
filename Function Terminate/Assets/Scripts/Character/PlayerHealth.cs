@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    private GameManager manager;
 
     [SerializeField] private float maxHealthPoint = 500;
     [SerializeField] private float currentHealthPoints = 475;
@@ -26,13 +27,13 @@ public class PlayerHealth : MonoBehaviour
     }
 
     private void Death() {
-
+        manager.GameOver();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-         
+        manager = GameManager.instance;    
     }
 
     // Update is called once per frame

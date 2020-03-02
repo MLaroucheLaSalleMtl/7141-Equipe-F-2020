@@ -32,16 +32,21 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Cursor.lockState = CursorLockMode.None;
         gameoverPanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void Victory()
     {
         victoryPanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void retry()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1;
         gameoverPanel.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

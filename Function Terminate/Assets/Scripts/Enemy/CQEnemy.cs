@@ -5,12 +5,12 @@ using UnityEngine.AI;
 
 
 public class CQEnemy : MonoBehaviour
-{
+{ 
     [SerializeField]private float speed = 5;
     [SerializeField]private float range = 5;
     [SerializeField]private float attackFrequency;
     [SerializeField]private float attackDamage = 10;
-    [SerializeField]private float enemyHP=100;
+    [SerializeField]private float enemyHP=100f;
     private bool playerInRange = false;
     private GameObject target;
     [SerializeField] private GameObject detected;
@@ -67,15 +67,11 @@ public class CQEnemy : MonoBehaviour
         }
     }
 
-
-    private void OnCollisionEnter(Collision collision)
+    public  void TakeDamage(float Damage)
     {
-        if (collision.gameObject.tag == "player")
-        {
-            Debug.Log("Collision");
-            enemyHP -= 10;
-        }
+        this.enemyHP -= Damage; 
     }
+    
     private void Attack()
     {
         attackThing.GetComponent<Animation>().Play("BasicAttackAnimation");
@@ -86,9 +82,10 @@ public class CQEnemy : MonoBehaviour
     private void Die()
     {
         
-        this.GetComponent<Animation>().Play("CQDead");
+        this.GetComponent<Animation>().Play("CQDeath");
         detected.SetActive(false);
         Destroy(this.gameObject, 2f);
+        
     }
 
 
@@ -108,7 +105,9 @@ public class CQEnemy : MonoBehaviour
             }
             yield return new WaitForSeconds(0.1f);
         }
-        Debug.Log("How did I get here?");
     }
+ 
 
+
+   
 }

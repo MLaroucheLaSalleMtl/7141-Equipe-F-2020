@@ -7,7 +7,7 @@ public class WeakSpot : MonoBehaviour
 
     [SerializeField] private BossBlueprint boss;
 
-    public void SendDamage(float damage) {
-        boss.TakeDamage(damage);
+    public void SendDamage(float Damage) {
+        boss.TakeDamage(Damage);
     }
 }

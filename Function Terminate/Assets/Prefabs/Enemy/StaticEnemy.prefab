@@ -434,8 +434,8 @@ MonoBehaviour:
   DetectionDistance: 50
   projectile: {fileID: 7954787223052361744, guid: a05cb906854a5794e8f1fd749be30078,
     type: 3}
-  hp: 150
-  damage: 100
+  hp: 50
+  damage: 10
 --- !u!54 &8397192485804850991
 Rigidbody:
   m_ObjectHideFlags: 0
