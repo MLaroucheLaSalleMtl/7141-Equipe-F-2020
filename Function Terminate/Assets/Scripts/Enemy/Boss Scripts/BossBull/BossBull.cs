@@ -51,7 +51,7 @@ public class BossBull : BossBlueprint {
                 else
                 {
 
-                    if (BossController.remainingDistance < 2.5f && !waiting)
+                    if ((BossController.remainingDistance < 2.5f && BossController.remainingDistance !=0 ) && !waiting)
                     {
                         TargetPlayerConstraint.constraintActive = true;
                         BossController.isStopped = true;
@@ -82,6 +82,7 @@ public class BossBull : BossBlueprint {
 
     protected override void SpecialAttack()
     {
+        
         isCharging = true;
         IsMoving = false;
         BossController.enabled = false;

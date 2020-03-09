@@ -77,12 +77,7 @@ public class BossLaserAbility : MonoBehaviour
      }
 
     private void CheckAngle() {
-        float mainBodyY = mainBody.transform.rotation.y;
-        float targetingY = targeting.transform.rotation.y;
-        float angleallowed = (1-Mathf.Sin(45));
-        if (Mathf.Abs(targetingY - mainBodyY) >= angleallowed )
-        {
-            Debug.Log("Target behind boss");
+        if ((Mathf.Acos(targeting.transform.localRotation.y) * (180 / Mathf.PI)) - 90  > 45 && (Mathf.Acos(targeting.transform.localRotation.y) * (180 / Mathf.PI)) - 90 < -45) {
             isFiring = false;
         }
     }

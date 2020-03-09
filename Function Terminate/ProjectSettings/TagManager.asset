@@ -9,7 +9,6 @@ TagManager:
   - Damage
   - ground
   - Enemy
-  - Enemy
   - CQEnemy
   - EnemyStatic
   - EnemyRanged
