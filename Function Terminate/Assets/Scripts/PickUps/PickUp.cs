@@ -26,8 +26,8 @@ public class PickUp : MonoBehaviour
         {
             switch (type) {
                 case PichUpType.Ammo:
-                    if (other.gameObject.GetComponentInChildren<GunScript>()) {
-                        other.gameObject.GetComponentInChildren<GunScript>().AddAmmo(ammount);
+                    if (other.gameObject.GetComponentInChildren<GunFactory>()) {
+                        other.gameObject.GetComponentInChildren<GunFactory>().AddAmmo(ammount);
                     }
                     break;
                 case PichUpType.Health:

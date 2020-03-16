@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ammoText : MonoBehaviour
 {
     [SerializeField] private Text aText;
-    [SerializeField] private GunScript gunObject;
+    [SerializeField] private GunFactory gunObject;
     void Update()
     {
         aText.text = "" + gunObject.Ammo.ToString();

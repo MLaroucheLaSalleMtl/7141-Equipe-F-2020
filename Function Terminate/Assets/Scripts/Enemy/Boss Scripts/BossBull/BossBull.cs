@@ -17,7 +17,7 @@ public class BossBull : BossBlueprint {
     [SerializeField] private BossLaserAbility[] laserHorns;
 
     [SerializeField] private float waitUntilMove = 5f;
-    [SerializeField] private float minDistance = 3f;
+    [SerializeField] private float minDistance = 5f;
     [SerializeField] private float maxDistance = 10f;
 
     private AudioSource audio;

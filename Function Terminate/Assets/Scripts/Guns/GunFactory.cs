@@ -16,4 +16,9 @@ public abstract class GunFactory : MonoBehaviour
 
     protected abstract void Shoot() ;
 
+
+    public void AddAmmo(int nbAmmo)
+    {
+        Ammo += nbAmmo;
+    }
 }

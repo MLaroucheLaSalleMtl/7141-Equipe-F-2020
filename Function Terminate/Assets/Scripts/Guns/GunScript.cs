@@ -20,10 +20,10 @@ public class GunScript : GunFactory
     {
         RaycastHit hit;
         Beam.SetActive(true);
-        Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward*Range, Color.red, 5f);
+        //Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward*Range, Color.red, 5f);
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, Range))
         {
-
+            Debug.DrawLine(hit.point, hit.point, Color.black, 5f);
             if (hit.collider.gameObject.tag == "CQEnemy") {
                 if (hit.collider.gameObject.GetComponent<CQEnemy>()) {
                     CQEnemy target = hit.collider.gameObject.GetComponent<CQEnemy>();
@@ -108,9 +108,7 @@ public class GunScript : GunFactory
         
     }
 
-    public void AddAmmo(int nbAmmo) {
-        Ammo += nbAmmo;
-    }
+    
 
 
 }
