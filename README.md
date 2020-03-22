@@ -12,7 +12,7 @@ noir et rouge : frappe de loin et ne peut pas bouger.
 Grand bleu : Boss qui charge et tire des lazers, faiblesse en arriere.
 
 Controles :
-ZQSD pour se deplacer
+WASD pour se deplacer
 Shift pour courir
 Espace pour sauter
 Shift et espace pour sauter plus haut
