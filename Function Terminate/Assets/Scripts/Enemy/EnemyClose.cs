@@ -8,12 +8,11 @@ public class EnemyClose : Enemy
 
     private int destPoint = 0;
     private NavMeshAgent agent;
-
+    Transform Target;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        FireRate = 1f;
-        StartFireRate = Time.time;
+        Target = GameObject.FindGameObjectWithTag("player").transform;
     }
 
 
@@ -29,12 +28,13 @@ public class EnemyClose : Enemy
         Hp -= Damage;
     }
 
-    public override bool IsDead()
+    public bool IsDead()
     {
         return (Hp <= 0);
     }
+   
 
-    public override void Move()
+    protected  override void Move()
     {
         if (Vector3.Distance(transform.position, Target.position) <= DetectionDistance)
             HasDetected = true;
@@ -45,7 +45,7 @@ public class EnemyClose : Enemy
         }
     }
 
-    public override void Shoot()
+    protected override void Attack()
     {
         // Explode
     }

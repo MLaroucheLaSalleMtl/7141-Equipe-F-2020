@@ -3,72 +3,61 @@ using UnityEngine.AI;
 using System.Collections;
 
 
-public class EnemyStatic : MonoBehaviour
-{
-
-  
+public class EnemyStatic : Enemy
+{  
     private NavMeshAgent agent;
     private AudioSource audio;
-    [SerializeField] bool hasDetected = false;
-    [SerializeField] private Transform target;
-    [SerializeField] private float agentSpeed = 10f;
-    [SerializeField] private float fireRate;
-    [SerializeField] private float startFireRate;
-    [SerializeField] private float DetectionDistance = 10f;
-    [SerializeField] private GameObject projectile;
-    // enemy hp
-    [SerializeField] private float hp = 150;
-    // enemy damage 1/4 player's max health ?
-    [SerializeField] private int damage = 100;
-
-
-
+    private Transform target;
+    
+    float AttackRate = 1f;
+    float StartAttackRate;
+    public GameObject Projectile;
+    void Start()
+         
+    {
+        target = GameObject.FindGameObjectWithTag("player").transform;
+        agent = GetComponent<NavMeshAgent>();
+        audio = GetComponent<AudioSource>();
+       
+        DetectionDistance = 20f;
+        HasDetected = false;
+        StartAttackRate = Time.time;
+        Damage = 100;
+        Hp = 150f;
+    }
 
     // enemy take damage function
-    public void TakeDamage(float Damage)
+    public override void TakeDamage(float Damage)
     {
-        this.hp -= Damage;
+        this.Hp -= Damage;
         if (IsDead())
         {
             Destroy(this.gameObject);
-
+            GameObject lootobj = Instantiate(Projectile, transform.position, Quaternion.identity);
         }
     }
 
     // check if the enemy is dead
     public bool IsDead()
     {
-        return (this.hp <= 0);
+        return (this.Hp <= 0);
     }
-
-
-    void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-        audio = GetComponent<AudioSource>();
-        fireRate = 1f;
-        startFireRate = Time.time;
-    }
-
-
+    
     void LateUpdate()
     {
         if (Vector3.Distance(transform.position, target.position) <= DetectionDistance)
         {
-            hasDetected = true;
+            HasDetected = true;
         }
-        else
-        {
-            hasDetected = false;
-        }
+       
             
 
-        if (hasDetected)
+        if (HasDetected)
         {
             //transform.LookAt(target);
             //Invoke("LookPlayer", 1f);
             transform.LookAt(target);
-            Shoot();
+            Attack();
         }
     }
 
@@ -77,24 +66,22 @@ public class EnemyStatic : MonoBehaviour
         transform.LookAt(target);
     }
 
-    void Shoot()
+    protected override void Attack()
     {
-        if (Time.time > startFireRate)
+        if (Time.time > StartAttackRate)
         {
             audio.Play();
-            GameObject newProjectile =  Instantiate(projectile, transform.position, Quaternion.identity);
+            GameObject newProjectile =  Instantiate(Projectile, transform.position, Quaternion.identity);
             newProjectile.transform.LookAt(target.transform);
-            newProjectile.GetComponent<StraightProjectile>().SetDamage(damage);
-            startFireRate = Time.time + fireRate;
+            newProjectile.GetComponent<StraightProjectile>().SetDamage(Damage);
+            StartAttackRate = Time.time + AttackRate;
         }
     }
 
 
 
-    private void OnCollisionEnter(Collision collision)
+    protected override void Move()
     {
-
+        throw new System.NotImplementedException();
     }
-
-
 }

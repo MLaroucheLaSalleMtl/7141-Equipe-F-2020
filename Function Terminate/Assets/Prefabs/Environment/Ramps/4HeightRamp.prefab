@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4240346957089867013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4HeightRamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 6348044316700691085}
   - component: {fileID: 2746534215817074180}
   - component: {fileID: 8804887377773204460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorConnectorBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 6588429764257229627}
   - component: {fileID: 5579604486624431857}
   - component: {fileID: 8361487665901424796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorConnectorTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,6 +10,12 @@ public class EnemyRanged : Enemy
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
+    public Transform Target;
+    float AttackRate = 1f;
+    float StartAttackRate;
+    public GameObject Projectile;
+
+    [SerializeField] private GameObject[] lootObjs;
 
 
     void Start()
@@ -21,9 +27,10 @@ public class EnemyRanged : Enemy
         agent.autoBraking = false;
         GotoNextPoint();
         //fireRate = startFireRate;
-        FireRate = 1f;
-        StartFireRate = Time.time;
-       
+        StartAttackRate = Time.time;
+        Target = GameObject.FindGameObjectWithTag("player").transform;
+        DetectionDistance = 40;
+        StoppingDistance = 20;
     }
 
 
@@ -51,17 +58,21 @@ public class EnemyRanged : Enemy
         Hp -= Damage;
         if (IsDead())
         {
-            Destroy(this.gameObject);
 
+            Dice dice = Dice.Get_Instance();
+            int random = dice.Next(1, 6);
+            Vector3 i = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            GameObject lootobj = Instantiate(lootObjs[random], i, Quaternion.identity);
+            Destroy(this.gameObject);
         }
     }
 
-    public override bool IsDead()
+    public bool IsDead()
     {
         return (Hp <= 0);
     }
 
-    public override void Move()
+    protected override void Move()
     {
         if (Vector3.Distance(transform.position, Target.position) <= DetectionDistance)
             HasDetected = true;
@@ -80,14 +91,14 @@ public class EnemyRanged : Enemy
             {
                 agent.destination = transform.position;
                 transform.LookAt(Target);
-                Shoot();
+                Attack();
                 agent.speed = 50f;
             }
             else if (Vector3.Distance(transform.position, Target.position) < RetreatDistance)
             {
                 agent.destination = Target.position * -1;
                 transform.LookAt(Target);
-                Shoot();
+                Attack();
             }
 
         }
@@ -102,15 +113,15 @@ public class EnemyRanged : Enemy
         }
     }
 
-    public override void Shoot()
+    protected override void Attack()
     {
-        if (Time.time > StartFireRate)
+        if (Time.time > StartAttackRate)
         {
             GameObject newProjectile = Instantiate(Projectile, transform.position, Quaternion.identity);
             audio.Play();
             newProjectile.transform.LookAt(Target.transform);
             newProjectile.GetComponent<StraightProjectile>().SetDamage(Damage);
-            StartFireRate = Time.time + FireRate;
+            StartAttackRate = Time.time + AttackRate;
         }
     }
 }

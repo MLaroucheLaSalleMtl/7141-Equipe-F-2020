@@ -47,12 +47,13 @@ public class LaserRifleGunScript : GunFactory
             else
             {
                 Shootlaser(hit.point);
+                Debug.Log("Damage sent : "+ CalculateDamage(hit.distance).ToString() + " Distance : "+ hit.distance.ToString());
                 if (hit.collider.gameObject.tag == "CQEnemy")
                 {
                     if (hit.collider.gameObject.GetComponent<CQEnemy>())
                     {
                         CQEnemy target = hit.collider.gameObject.GetComponent<CQEnemy>();
-                        target.TakeDamage(Damage);
+                        target.TakeDamage(CalculateDamage(hit.distance));
                     }
 
                 }
@@ -61,7 +62,7 @@ public class LaserRifleGunScript : GunFactory
                     if (hit.collider.gameObject.GetComponent<EnemyStatic>())
                     {
                         EnemyStatic target = hit.collider.gameObject.GetComponent<EnemyStatic>();
-                        target.TakeDamage(Damage);
+                        target.TakeDamage(CalculateDamage(hit.distance));
                     }
                 }
                 if (hit.collider.gameObject.tag == "EnemyRanged")
@@ -69,7 +70,7 @@ public class LaserRifleGunScript : GunFactory
                     if (hit.collider.gameObject.GetComponent<EnemyRanged>())
                     {
                         EnemyRanged target = hit.collider.gameObject.GetComponent<EnemyRanged>();
-                        target.TakeDamage(Damage);
+                        target.TakeDamage(CalculateDamage(hit.distance));
                     }
 
                 }
@@ -78,12 +79,32 @@ public class LaserRifleGunScript : GunFactory
                     if (hit.collider.gameObject.GetComponent<WeakSpot>())
                     {
                         WeakSpot target = hit.collider.gameObject.GetComponent<WeakSpot>();
-                        target.SendDamage(Damage);
+                        target.SendDamage(CalculateDamage(hit.distance));
                     }
 
                 }
             }
         }
+    }
+
+    private float CalculateDamage(float distance) {
+        float difference = distance - Range;
+        if (difference < -(Range / 2))
+        {
+            return Damage * 2f;
+        }
+        else if (difference > -(Range / 2) && difference < 0)
+        {
+            return Damage * 1.5f;
+        }
+        else if (distance <= (Range * 1.25) && difference >= 0)
+        {
+            return Damage;
+        }
+        else if(distance > (Range * 1.25)) {
+            return (Damage*(Range / distance));
+        }
+        return Damage;
     }
 
 

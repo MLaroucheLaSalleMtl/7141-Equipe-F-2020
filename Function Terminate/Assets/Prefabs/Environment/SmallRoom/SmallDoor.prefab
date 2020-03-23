@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7640400238040142045}
   - component: {fileID: 6701928177334812276}
   - component: {fileID: 7757359740034269060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 8519427883687429335}
   - component: {fileID: 1132003587109397304}
   - component: {fileID: 6971021645446476412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6774149329058954315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmallDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 1607416480275452500}
   - component: {fileID: 2645656053104386505}
   - component: {fileID: 6380869428201975879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

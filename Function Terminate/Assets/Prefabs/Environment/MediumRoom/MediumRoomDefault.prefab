@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6144569029257702675}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MediumRoomDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 6144569029607845161}
   - component: {fileID: 6144569029607845160}
   - component: {fileID: 6144569029607845163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: celling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 6144569029857392062}
   - component: {fileID: 6144569029857392057}
   - component: {fileID: 6144569029857392056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 6144569030071431730}
   - component: {fileID: 6144569030071431725}
   - component: {fileID: 6144569030071431724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pillar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 6144569030131894509}
   - component: {fileID: 6144569030131894508}
   - component: {fileID: 6144569030131894511}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pillar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 6144569031008134578}
   - component: {fileID: 6144569031008134573}
   - component: {fileID: 6144569031008134572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

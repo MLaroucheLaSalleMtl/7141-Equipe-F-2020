@@ -9,6 +9,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float JumpPower = 5.0f;
     [SerializeField] private float SuperJumpPower = 15.0f;
     [SerializeField] private float SprintSpeed = 30.0f;
+
+    [SerializeField] private float SuperSpeed = 45.0f;
     private float CurrentSpeed;
     public CharacterController Controller;
     Vector3 Velocity;
@@ -52,6 +54,18 @@ public class CharacterMovement : MonoBehaviour
     {
         CurrentSpeed = SprintSpeed;
 
+    }
+
+    // super speed
+    public void SS(float time)
+    {
+        CurrentSpeed = SuperSpeed;
+        Invoke("ToNormalSpeed", time);
+    }
+
+    private void ToNormalSpeed()
+    {
+        CurrentSpeed = MovementSpeed;
     }
     private void Update()
     {

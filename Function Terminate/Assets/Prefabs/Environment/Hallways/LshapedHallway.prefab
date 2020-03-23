@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 975132351519175853}
   - component: {fileID: 8369512795770503960}
   - component: {fileID: 96363981557561820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 6355478958379613149}
   - component: {fileID: 3735684801367886027}
   - component: {fileID: 3777520728957449899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 4868567804917725337}
   - component: {fileID: 3619595941326008087}
   - component: {fileID: 6382186526228545794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 482072169711407842}
   - component: {fileID: 8324497606114905565}
   - component: {fileID: 4139503536082397766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 1761295085622288273}
   - component: {fileID: 8034232267878745640}
   - component: {fileID: 2450720814164058782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 1335404860230884379}
   - component: {fileID: 5127300568872322598}
   - component: {fileID: 3386970581960283678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1827764192754426020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LshapedHallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}

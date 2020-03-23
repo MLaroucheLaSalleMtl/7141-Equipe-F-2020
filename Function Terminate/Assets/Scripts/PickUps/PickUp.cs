@@ -16,7 +16,8 @@ public class PickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myTransform.Rotate(0.5f, 0.1f, -0.1f, Space.Self);
+        // changed y and z angles
+        myTransform.Rotate(0.1f, 0f, 0f, Space.Self);
     }
 
 
@@ -37,7 +38,22 @@ public class PickUp : MonoBehaviour
                     }
                     break;
                 case PichUpType.Defense:
-                    //ToDo
+                    if (other.gameObject.GetComponent<PlayerHealth>())
+                    {
+                        other.gameObject.GetComponent<PlayerHealth>().AddDefence(ammount);
+                    }
+                    break;
+                case PichUpType.Speed:
+                    if (other.gameObject.GetComponent<CharacterMovement>())
+                    {
+                        other.gameObject.GetComponent<CharacterMovement>().SS(10f);
+                    }
+                    break;
+                case PichUpType.Upgrade:
+                    if (other.gameObject.GetComponent<PlayerHealth>())
+                    {
+
+                    }
                     break;
                 case PichUpType.Power:
                     //ToDo
@@ -49,5 +65,5 @@ public class PickUp : MonoBehaviour
 }
 
 internal enum PichUpType{
-    Ammo,Health,Power,Defense
+    Ammo,Health,Power,Defense,Upgrade,Speed
 }

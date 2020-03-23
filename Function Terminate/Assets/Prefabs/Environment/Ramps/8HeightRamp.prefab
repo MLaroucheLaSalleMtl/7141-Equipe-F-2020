@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 7339332801002503277}
   - component: {fileID: 2008573210655334628}
   - component: {fileID: 5184622334664746252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorConnectorBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 511996348699096037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 8HeightRamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 7398439017884687835}
   - component: {fileID: 8119137284196759569}
   - component: {fileID: 5317550884481984124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorConnectorTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

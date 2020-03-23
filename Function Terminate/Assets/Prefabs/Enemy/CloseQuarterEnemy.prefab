@@ -463,8 +463,10 @@ MonoBehaviour:
   attackFrequency: 1
   attackDamage: 10
   enemyHP: 100
+  target: {fileID: 0}
   detected: {fileID: 3796268382307367827}
   attackThing: {fileID: 3796268381283128303}
+  lootObjs: []
 --- !u!195 &3796268382474530869
 NavMeshAgent:
   m_ObjectHideFlags: 0

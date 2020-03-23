@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5524384379883303775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IshapedHallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 5489187159276957382}
   - component: {fileID: 1466996515617640007}
   - component: {fileID: 6357028210663953957}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 991981568602466342}
   - component: {fileID: 7359121498847353648}
   - component: {fileID: 7033347859760653648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 2895096890494938048}
   - component: {fileID: 4348013314575829775}
   - component: {fileID: 7386637632298445617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cellieng
   m_TagString: Untagged
   m_Icon: {fileID: 0}

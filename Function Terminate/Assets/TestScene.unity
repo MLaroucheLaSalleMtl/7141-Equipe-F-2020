@@ -1696,7 +1696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  range: 50
+  range: 40
   ammo: 50
   fireRate: 0.5
   playerCamera: {fileID: 691155349}
@@ -5640,6 +5640,17 @@ PrefabInstance:
       propertyPath: damage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8186261747395980581, guid: ad87beed3461ef04f979b20426cfccfc,
+        type: 3}
+      propertyPath: Projectile
+      value: 
+      objectReference: {fileID: 7954787223052361744, guid: a05cb906854a5794e8f1fd749be30078,
+        type: 3}
+    - target: {fileID: 8186261747395980581, guid: ad87beed3461ef04f979b20426cfccfc,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 132409284}
     - target: {fileID: 8186261747395980582, guid: ad87beed3461ef04f979b20426cfccfc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5824,6 +5835,12 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 132409284}
+    - target: {fileID: 8397192485804850988, guid: 49fe0144eac658e4ca1828dd202537a2,
+        type: 3}
+      propertyPath: Projectile
+      value: 
+      objectReference: {fileID: 7954787223052361744, guid: a05cb906854a5794e8f1fd749be30078,
+        type: 3}
     - target: {fileID: 8397192486062376377, guid: 49fe0144eac658e4ca1828dd202537a2,
         type: 3}
       propertyPath: m_Enabled

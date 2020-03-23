@@ -19,7 +19,7 @@ public class GunScript : GunFactory
     protected override void Shoot( )
     {
         RaycastHit hit;
-        Beam.SetActive(true);
+        
         //Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward*Range, Color.red, 5f);
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, Range))
         {
@@ -94,13 +94,16 @@ public class GunScript : GunFactory
     {
         if (Input.GetButton("Fire1") && Ammo >= 0)
         {
-            Shoot();
+            Beam.SetActive(true);
+            InvokeRepeating("Shoot", 0f, .5f);
+            //Shoot();
             Invoke("DecreaseAmmo", 1f);
            
 
         }
         else
         {
+            CancelInvoke("Shoot");
             Beam.SetActive(false);
             CancelInvoke("DecreaseAmmo");
         }
