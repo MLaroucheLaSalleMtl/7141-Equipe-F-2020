@@ -67,9 +67,20 @@ public class LaserRifleGunScript : GunFactory
                 }
                 if (hit.collider.gameObject.tag == "EnemyRanged")
                 {
+                    
                     if (hit.collider.gameObject.GetComponent<EnemyRanged>())
                     {
                         EnemyRanged target = hit.collider.gameObject.GetComponent<EnemyRanged>();
+                        target.TakeDamage(CalculateDamage(hit.distance));
+                    }
+
+                }
+                if (hit.collider.gameObject.tag == "EnemyExploding")
+                {
+                   
+                    if (hit.collider.gameObject.GetComponent<EnemyExploding>())
+                    {
+                        EnemyExploding target = hit.collider.gameObject.GetComponent<EnemyExploding>();
                         target.TakeDamage(CalculateDamage(hit.distance));
                     }
 
@@ -81,7 +92,11 @@ public class LaserRifleGunScript : GunFactory
                         WeakSpot target = hit.collider.gameObject.GetComponent<WeakSpot>();
                         target.SendDamage(CalculateDamage(hit.distance));
                     }
-
+                    if (hit.collider.gameObject.GetComponent<BossBlueprint>())
+                    {
+                        BossBlueprint target = hit.collider.gameObject.GetComponent<BossBlueprint>();
+                        target.TakeDamage(CalculateDamage(hit.distance));
+                    }
                 }
             }
         }

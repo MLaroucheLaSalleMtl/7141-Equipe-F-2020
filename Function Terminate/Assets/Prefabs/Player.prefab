@@ -5053,6 +5053,7 @@ MonoBehaviour:
   JumpPower: 1
   SuperJumpPower: 15
   SprintSpeed: 30
+  SuperSpeed: 45
   Controller: {fileID: 6141710092395301944}
   GroundCheck: {fileID: 6141710091915204989}
   GroundMask:
@@ -5091,6 +5092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthPoint: 500
   currentHealthPoints: 475
+  defence: 0
 --- !u!1001 &6141710091818799969
 PrefabInstance:
   m_ObjectHideFlags: 0

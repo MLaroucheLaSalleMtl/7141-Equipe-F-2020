@@ -48,6 +48,16 @@ public class GunScript : GunFactory
                 }
 
             }
+            if (hit.collider.gameObject.tag == "EnemyExploding")
+            {
+                Debug.Log("EnemyExploding hit");
+                if (hit.collider.gameObject.GetComponent<EnemyExploding>())
+                {
+                    EnemyExploding target = hit.collider.gameObject.GetComponent<EnemyExploding>();
+                    target.TakeDamage(Damage);
+                }
+
+            }
             if (hit.collider.gameObject.tag == "WeakSpot")
             {
                 if (hit.collider.gameObject.GetComponent<WeakSpot>())

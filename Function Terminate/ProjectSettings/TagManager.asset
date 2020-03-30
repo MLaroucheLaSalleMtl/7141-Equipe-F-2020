@@ -12,6 +12,7 @@ TagManager:
   - CQEnemy
   - EnemyStatic
   - EnemyRanged
+  - EnemyExploding
   layers:
   - Default
   - TransparentFX
