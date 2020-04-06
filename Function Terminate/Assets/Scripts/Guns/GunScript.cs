@@ -24,70 +24,59 @@ public class GunScript : GunFactory
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, Range))
         {
             Debug.DrawLine(hit.point, hit.point, Color.black, 5f);
-            if (hit.collider.gameObject.tag == "CQEnemy") {
-                if (hit.collider.gameObject.GetComponent<CQEnemy>()) {
-                    CQEnemy target = hit.collider.gameObject.GetComponent<CQEnemy>();
-                    target.TakeDamage(Damage);
-                }
-
-            }
-            if (hit.collider.gameObject.tag == "EnemyStatic")
+            if (hit.collider.gameObject.tag == "Enemy")
             {
-                if (hit.collider.gameObject.GetComponent<EnemyStatic>())
+                if (hit.collider.gameObject.GetComponent<Enemy>())
                 {
-                    EnemyStatic target = hit.collider.gameObject.GetComponent<EnemyStatic>();
+                    Enemy target = hit.collider.gameObject.GetComponent<Enemy>();
                     target.TakeDamage(Damage);
                 }
             }
-            if (hit.collider.gameObject.tag == "EnemyRanged")
-            {
-                if (hit.collider.gameObject.GetComponent<EnemyRanged>())
-                {
-                    EnemyRanged target = hit.collider.gameObject.GetComponent<EnemyRanged>();
-                    target.TakeDamage(Damage);
-                }
+                //if (hit.collider.gameObject.tag == "CQEnemy") {
+                //    if (hit.collider.gameObject.GetComponent<CQEnemy>()) {
+                //        CQEnemy target = hit.collider.gameObject.GetComponent<CQEnemy>();
+                //        target.TakeDamage(Damage);
+                //    }
 
-            }
-            if (hit.collider.gameObject.tag == "EnemyExploding")
-            {
-                Debug.Log("EnemyExploding hit");
-                if (hit.collider.gameObject.GetComponent<EnemyExploding>())
-                {
-                    EnemyExploding target = hit.collider.gameObject.GetComponent<EnemyExploding>();
-                    target.TakeDamage(Damage);
-                }
+                //}
+                //if (hit.collider.gameObject.tag == "EnemyStatic")
+                //{
+                //    if (hit.collider.gameObject.GetComponent<EnemyStatic>())
+                //    {
+                //        EnemyStatic target = hit.collider.gameObject.GetComponent<EnemyStatic>();
+                //        target.TakeDamage(Damage);
+                //    }
+                //}
+                //if (hit.collider.gameObject.tag == "EnemyRanged")
+                //{
+                //    if (hit.collider.gameObject.GetComponent<EnemyRanged>())
+                //    {
+                //        EnemyRanged target = hit.collider.gameObject.GetComponent<EnemyRanged>();
+                //        target.TakeDamage(Damage);
+                //    }
 
-            }
-            if (hit.collider.gameObject.tag == "WeakSpot")
+                //}
+                //if (hit.collider.gameObject.tag == "EnemyExploding")
+                //{
+                //    Debug.Log("EnemyExploding hit");
+                //    if (hit.collider.gameObject.GetComponent<EnemyExploding>())
+                //    {
+                //        EnemyExploding target = hit.collider.gameObject.GetComponent<EnemyExploding>();
+                //        target.TakeDamage(Damage);
+                //    }
+
+                //}
+                if (hit.collider.gameObject.tag == "WeakSpot")
             {
                 if (hit.collider.gameObject.GetComponent<WeakSpot>())
                 {
-                    WeakSpot  target = hit.collider.gameObject.GetComponent<WeakSpot>();
+                    WeakSpot target = hit.collider.gameObject.GetComponent<WeakSpot>();
                     target.SendDamage(Damage);
                 }
 
             }
 
 
-            //EnemyStatic target2 = hit.transform.GetComponent<EnemyStatic>();
-            //EnemyRanged target3 = hit.transform.GetComponent<EnemyRanged>();
-            //WeakSpot BossTarget = hit.transform.GetComponent<WeakSpot>();
-            //if (target.gameObject.CompareTag("EnemyStatic"))
-            //{
-            //    target2.TakeDamage(Damage);//Demo HAVE TO CHANGE ENEMY BP
-
-            //}
-            //if (target.gameObject.CompareTag("EnemyRanged"))
-            //{
-            //    target3.TakeDamage(Damage);//Demo HAVE TO CHANGE ENEMY BP
-
-
-            //}
-
-            //if (target.gameObject.CompareTag("WeakSpot"))
-            //{
-            //    BossTarget.SendDamage(Damage);
-            //}
 
 
 

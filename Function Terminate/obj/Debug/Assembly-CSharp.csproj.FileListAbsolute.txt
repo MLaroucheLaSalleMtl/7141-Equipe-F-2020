@@ -542,3 +542,17 @@ C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Termi
 C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\obj\Debug\Assembly-CSharp.dll
 C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Animation.Rigging.dll
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Animation.Rigging.Editor.dll
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Burst.dll
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Burst.Editor.dll
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Burst.Unsafe.dll
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Mathematics.dll
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Mathematics.Editor.dll
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Burst.pdb
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Burst.Editor.pdb
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Animation.Rigging.pdb
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Mathematics.pdb
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Animation.Rigging.Editor.pdb
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Mathematics.Editor.pdb
+C:\Users\Default.DESKTOP-PLI5O2H\Desktop\Ecole\7141-Equipe-F-2020\Function Terminate\Temp\bin\Debug\Unity.Burst.Unsafe.xml
