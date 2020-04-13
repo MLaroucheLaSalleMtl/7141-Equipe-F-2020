@@ -7,12 +7,14 @@ public class HandGun : GunFactory
 
     [SerializeField] Camera cam;
     [SerializeField] private GameObject impact;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         Ammo = 50;
         Range = 50f;
         Damage = 15f;
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,7 +34,8 @@ public class HandGun : GunFactory
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Range))
         {
             Debug.Log("Hit " + hit.transform.name);
-
+            //anim.SetTrigger("tilt");
+            anim.Play("tilt");
             if (hit.collider.gameObject.tag == "Enemy")
             {
                 if (hit.collider.gameObject.GetComponent<Enemy>())

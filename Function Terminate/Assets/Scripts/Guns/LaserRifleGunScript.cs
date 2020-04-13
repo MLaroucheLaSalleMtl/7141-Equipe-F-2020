@@ -47,40 +47,11 @@ public class LaserRifleGunScript : GunFactory
             else
             {
                 Shootlaser(hit.point);
-                Debug.Log("Damage sent : "+ CalculateDamage(hit.distance).ToString() + " Distance : "+ hit.distance.ToString());
-                if (hit.collider.gameObject.tag == "CQEnemy")
+                if (hit.collider.gameObject.tag == "Enemy")
                 {
-                    if (hit.collider.gameObject.GetComponent<CQEnemy>())
+                    if (hit.collider.gameObject.GetComponent<Enemy>())
                     {
-                        CQEnemy target = hit.collider.gameObject.GetComponent<CQEnemy>();
-                        target.TakeDamage(CalculateDamage(hit.distance));
-                    }
-
-                }
-                if (hit.collider.gameObject.tag == "EnemyStatic")
-                {
-                    if (hit.collider.gameObject.GetComponent<EnemyStatic>())
-                    {
-                        EnemyStatic target = hit.collider.gameObject.GetComponent<EnemyStatic>();
-                        target.TakeDamage(CalculateDamage(hit.distance));
-                    }
-                }
-                if (hit.collider.gameObject.tag == "EnemyRanged")
-                {
-                    
-                    if (hit.collider.gameObject.GetComponent<EnemyRanged>())
-                    {
-                        EnemyRanged target = hit.collider.gameObject.GetComponent<EnemyRanged>();
-                        target.TakeDamage(CalculateDamage(hit.distance));
-                    }
-
-                }
-                if (hit.collider.gameObject.tag == "EnemyExploding")
-                {
-                   
-                    if (hit.collider.gameObject.GetComponent<EnemyExploding>())
-                    {
-                        EnemyExploding target = hit.collider.gameObject.GetComponent<EnemyExploding>();
+                        Enemy target = hit.collider.gameObject.GetComponent<Enemy>();
                         target.TakeDamage(CalculateDamage(hit.distance));
                     }
 

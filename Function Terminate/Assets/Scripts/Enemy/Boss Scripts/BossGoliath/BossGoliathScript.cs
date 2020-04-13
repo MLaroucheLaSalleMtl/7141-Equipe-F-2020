@@ -29,6 +29,8 @@ public class BossGoliathScript : BossBlueprint {
         ConstraintSource aimAtSource = new ConstraintSource();
         aimAtSource.weight = 1;
         aimAtSource.sourceTransform = Target.transform;
+        GetComponent<LookAtConstraint>().AddSource(aimAtSource);
+        GetComponent<LookAtConstraint>().constraintActive = true;
         foreach (Transform t in fireLocations) {
             if (t.GetComponent<LookAtConstraint>())
             {
@@ -67,9 +69,6 @@ public class BossGoliathScript : BossBlueprint {
 // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) {
-            TargetPlayer(GameObject.FindGameObjectWithTag("player"));
-        }
         if (HealthPoints < HealthPoints * 0.75) {
             DamageAttackRate = 2;
         } else if (HealthPoints < HealthPoints * 0.5) {

@@ -4765,6 +4765,8 @@ GameObject:
   - component: {fileID: 1042466012002462922}
   - component: {fileID: 2078141173864022261}
   - component: {fileID: 594826118471403578}
+  - component: {fileID: -8534601363536807983}
+  - component: {fileID: 2614504189741850336}
   m_Layer: 0
   m_Name: PlasmaExplosion 1
   m_TagString: Untagged
@@ -4801,7 +4803,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -8309,7 +8311,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 0
     collisionMode: 0
@@ -9509,3 +9511,28 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-8534601363536807983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595245393329682861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6f92e0a9694d5408975bbe70a89af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2614504189741850336
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595245393329682861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.3, y: -5.24, z: 7.09}
+  m_Center: {x: 0, y: 0, z: 0}

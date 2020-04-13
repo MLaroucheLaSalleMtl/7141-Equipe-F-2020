@@ -60,7 +60,7 @@ public class EnemyRanged : Enemy
         {
 
             Dice dice = Dice.Get_Instance();
-            int random = dice.Next(1, 6);
+            int random = dice.Next(1, lootObjs.Length);
             Vector3 i = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
             GameObject lootobj = Instantiate(lootObjs[random], i, Quaternion.identity);
             Destroy(this.gameObject);

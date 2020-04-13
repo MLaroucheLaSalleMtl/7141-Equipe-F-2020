@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 273292470941555293}
   m_Layer: 0
   m_Name: Case
-  m_TagString: Untagged
+  m_TagString: pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammount: 0
   type: 0
+  lootObjs:
+  - {fileID: 6035061924378689426, guid: ea1f0b78f9f430343b3bb35d440132d7, type: 3}
+  - {fileID: 8933294389934135657, guid: 87541d5c1e9012f44aef933f7004755a, type: 3}
+  - {fileID: 7104375483314156182, guid: 883dc8f9b68876b4fb542dc0f4ddfebf, type: 3}
+  - {fileID: 6569808848576293350, guid: 5eb88f5e29c48f4438913e8cb679e27f, type: 3}
+  - {fileID: 4154697993947379786, guid: 5bcc681eb72e91347ad4eaf3383ce6ae, type: 3}
+  - {fileID: 4109117100636016136, guid: 986434f343e4a8d4e9a5a094fd6e751a, type: 3}
 --- !u!65 &273292470941555293
 BoxCollider:
   m_ObjectHideFlags: 0

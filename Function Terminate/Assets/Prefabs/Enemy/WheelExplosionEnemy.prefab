@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 9103354861609639376}
   m_Layer: 12
   m_Name: WheelExplosionEnemy
-  m_TagString: EnemyExploding
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,15 +147,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd002ae0e80e85479c8ff276350040a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
   explosionEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
     type: 3}
   lootObjs:
   - {fileID: 6035061924378689426, guid: ea1f0b78f9f430343b3bb35d440132d7, type: 3}
   - {fileID: 8933294389934135657, guid: 87541d5c1e9012f44aef933f7004755a, type: 3}
   - {fileID: 7104375483314156182, guid: 883dc8f9b68876b4fb542dc0f4ddfebf, type: 3}
-  - {fileID: 994997550702954759, guid: 5eb88f5e29c48f4438913e8cb679e27f, type: 3}
-  - {fileID: 656392918907056744, guid: 5bcc681eb72e91347ad4eaf3383ce6ae, type: 3}
-  - {fileID: 4109117100636016136, guid: 986434f343e4a8d4e9a5a094fd6e751a, type: 3}
+  - {fileID: 6569808848576293350, guid: 5eb88f5e29c48f4438913e8cb679e27f, type: 3}
+  - {fileID: 5210158928647818214, guid: 5bcc681eb72e91347ad4eaf3383ce6ae, type: 3}
+  - {fileID: 3810514693063980403, guid: 986434f343e4a8d4e9a5a094fd6e751a, type: 3}
 --- !u!135 &9103354861609639376
 SphereCollider:
   m_ObjectHideFlags: 0

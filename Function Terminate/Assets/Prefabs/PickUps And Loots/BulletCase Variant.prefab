@@ -72,5 +72,11 @@ PrefabInstance:
       propertyPath: ammount
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8935229600885425248, guid: 11f45e8a3f969504f83bcb8573ffe287,
+        type: 3}
+      propertyPath: explosionEffect
+      value: 
+      objectReference: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11f45e8a3f969504f83bcb8573ffe287, type: 3}

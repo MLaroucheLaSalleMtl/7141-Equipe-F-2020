@@ -5,7 +5,7 @@ using System.Collections;
 
 public abstract class Enemy : MonoBehaviour
 {
-     private float hp;
+     [SerializeField]private float hp;
      private int damage;
      private bool hasDetected = false;
      //private Transform target;
