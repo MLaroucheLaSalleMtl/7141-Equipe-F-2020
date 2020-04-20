@@ -13,6 +13,8 @@ TagManager:
   - EnemyStatic
   - EnemyRanged
   - EnemyExploding
+  - pickup
+  - Boss
   layers:
   - Default
   - TransparentFX

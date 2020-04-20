@@ -83,7 +83,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830a7da1a30d33342b640710d8f41159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  damageSounds:
+  - {fileID: 8300000, guid: b8299ee1ee8461c4480b10b40f16cfb6, type: 3}
+  - {fileID: 8300000, guid: d011006b7f42a0b4f82738da2ef3858b, type: 3}
+  - {fileID: 8300000, guid: 4293dc79b0ddb9d498a1195eb30a55fa, type: 3}
+  - {fileID: 8300000, guid: c08bebace24b68a47bb945bbf3bcbcee, type: 3}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 30910f12448237341b768ea05ed3b770, type: 3}
+  hp: 50
+  damage: 10
   points: []
   Target: {fileID: 0}
   Projectile: {fileID: 2271282389228946256, guid: d8019a3c59997494cb5ba7b19675f169,
@@ -120,7 +128,8 @@ AudioSource:
   m_GameObject: {fileID: 8186261747395980583}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4541537467320707444, guid: 59b5410fa60beee4f870eb52f5bc17cc,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: dd79883e774fd87448cff6981bb434c9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

@@ -8,11 +8,13 @@ public class FireBallScript : MonoBehaviour
     [SerializeField] private GameObject fireBall;
     [SerializeField] private GameObject explosion;
     [SerializeField] private float damage = 0f;
-
+    private AudioSource audio;
+    [SerializeField] private AudioClip fireSound, explosionSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         fireBall.active = true;
         explosion.active = false;
         PlayParticles(explosion.GetComponents<ParticleSystem>());
@@ -31,11 +33,13 @@ public class FireBallScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        audio.PlayOneShot(fireSound);
         fireBall.active = false;
         explosion.transform.parent = null;
         explosion.transform.position = collision.GetContact(0).point;
         explosion.active = true;
         Collider[] explosionHits = Physics.OverlapSphere(explosion.transform.position, 5, 1 << LayerMask.NameToLayer("Player"));
+        AudioSource.PlayClipAtPoint(explosionSound, this.gameObject.transform.position);
         foreach (Collider hit in explosionHits) {
             if (hit.gameObject.tag == "player") {
                 if (hit.gameObject.GetComponent<PlayerHealth>()) {

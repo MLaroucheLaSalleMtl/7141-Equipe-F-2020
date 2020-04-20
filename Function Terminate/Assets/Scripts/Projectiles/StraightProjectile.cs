@@ -31,7 +31,7 @@ public class StraightProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("Collision");
+        
         if (collision.gameObject.tag == "player")
         {
             if(collision.gameObject.GetComponent<PlayerHealth>())

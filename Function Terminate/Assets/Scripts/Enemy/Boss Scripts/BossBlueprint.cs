@@ -8,10 +8,11 @@ using UnityEngine.Animations;
 [RequireComponent(typeof(LookAtConstraint))]
 public abstract class BossBlueprint : MonoBehaviour
 {
-    private GameManager manager;
+    protected GameManager manager;
 
     private GameObject target;
     private bool isMoving,isActive;
+    private AudioSource audio;
     private bool isUsingSpecialAttack;
     private NavMeshAgent bossController;
     private LookAtConstraint targetPlayerConstraint;
@@ -22,7 +23,8 @@ public abstract class BossBlueprint : MonoBehaviour
     [SerializeField] private float rateSpecialAttack;
     [SerializeField] private float rateNormalAttack;
     [Range(0.2f,1.0f)][SerializeField] private float lookAtWeight = 0.5f;
-    
+    [SerializeField] private AudioClip[] damageSounds;
+
     protected float HealthPoints { get => healthPoints; set => healthPoints = value; }
     protected float Damage { get => damage; set => damage = value; }
     protected float SpecialDamage { get => specialDamage; set => specialDamage = value; }
@@ -36,6 +38,7 @@ public abstract class BossBlueprint : MonoBehaviour
     protected bool IsActive { get => isActive; set => isActive = value; }
     protected float RateNormalAttack { get => rateNormalAttack; set => rateNormalAttack = value; }
     protected float RateSpecialAttack { get => rateSpecialAttack; set => rateSpecialAttack = value; }
+    protected AudioSource Audio { get => audio; set => audio = value; }
 
     protected abstract void SpecialAttack();
     protected abstract void Attack();
@@ -57,11 +60,15 @@ public abstract class BossBlueprint : MonoBehaviour
     public void TakeDamage(float damageTaken) {
         HealthPoints -= damageTaken;
         if (HealthPoints <= 0) {
-            manager = GameManager.instance;
-            manager.Victory();
+            CallManager();
 
             Destroy(this.gameObject);
             
+        }
+        if (damageSounds.Length > 0)
+        {
+            int snd = Random.Range(0, damageSounds.Length);
+            Audio.PlayOneShot(damageSounds[snd]);
         }
     }
 
@@ -75,5 +82,7 @@ public abstract class BossBlueprint : MonoBehaviour
         aimAtSource.sourceTransform = target.transform;
         targetPlayerConstraint.AddSource(aimAtSource);
     }
+
+    protected abstract void CallManager();
 
 }

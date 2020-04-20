@@ -1734,6 +1734,7 @@ MonoBehaviour:
   rateSpecialAttack: 5
   rateNormalAttack: 1.5
   lookAtWeight: 1
+  damageSounds: []
   sounds:
   - {fileID: 8300000, guid: 49886a1de05ae0641987864f98a62ca2, type: 3}
   - {fileID: 8300000, guid: 4f2ec0b3c65b2854095d9109aaa5897b, type: 3}
@@ -1786,7 +1787,8 @@ AudioSource:
   m_GameObject: {fileID: 9125220713838990371}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4541537467320707444, guid: 59b5410fa60beee4f870eb52f5bc17cc,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 49886a1de05ae0641987864f98a62ca2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

@@ -10,7 +10,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float SuperJumpPower = 15.0f;
     [SerializeField] private float SprintSpeed = 30.0f;
 
-    [SerializeField] private float SuperSpeed = 45.0f;
+    [SerializeField] private float SuperSpeed = 33.0f;
     private float CurrentSpeed;
     public CharacterController Controller;
     Vector3 Velocity;
@@ -69,6 +69,8 @@ public class CharacterMovement : MonoBehaviour
     }
     private void Update()
     {
+
+       
         Check();
         
         Movement();
@@ -87,11 +89,11 @@ public class CharacterMovement : MonoBehaviour
         
        
 
-        if (Input.GetButtonDown("Jump") && IsGrounded==true && IsSprinting==false)
+        if ((Input.GetButtonDown("Jump") || InputManager.Square()) && IsGrounded==true && IsSprinting==false)
         {
             Jump(); 
         }
-        if (Input.GetButtonDown("Jump") && IsGrounded == true && IsSprinting == true)
+        if ((Input.GetButtonDown("Jump") || InputManager.Square()) && IsGrounded == true && IsSprinting == true)
         {
             SuperJump();
         }

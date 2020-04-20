@@ -15,6 +15,7 @@ public class BossGoliathScript : BossBlueprint {
 
 // Start is called before the first frame update
     void Start(){
+        Audio = GetComponent<AudioSource>();
         DamageAttackRate = 1;
         attackPositioninUse = 0;
     }
@@ -94,5 +95,9 @@ public class BossGoliathScript : BossBlueprint {
         }while (true) ;
     }
 
-
+    protected override void CallManager()
+    {
+        manager = GameManager.instance;
+        manager.Victory();
+    }
 }

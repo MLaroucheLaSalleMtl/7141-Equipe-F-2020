@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour
     private Transform myTransform;
     [SerializeField] private int ammount;
     [SerializeField] private PichUpType type;
+    [SerializeField] private AudioClip ammoSound, pointSound,speedSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,13 @@ public class PickUp : MonoBehaviour
             switch (type) {
                 case PichUpType.Ammo:
                     if (other.gameObject.GetComponentInChildren<GunFactory>()) {
-                        other.gameObject.GetComponentInChildren<GunFactory>().AddAmmo(ammount);
+                        GunFactory[] allguns = other.gameObject.GetComponentsInChildren<GunFactory>();
+                        foreach (GunFactory gun in allguns)
+                        {
+                            gun.AddAmmo(ammount);
+                        }
+                        
+                        if (other.gameObject.GetComponent<AudioSource>()) { other.gameObject.GetComponent<AudioSource>().PlayOneShot(ammoSound); }
                     }
                     break;
                 case PichUpType.Health:
@@ -44,12 +51,14 @@ public class PickUp : MonoBehaviour
                     }
                     break;
                 case PichUpType.Speed:
+                    if (other.gameObject.GetComponent<AudioSource>()) { other.gameObject.GetComponent<AudioSource>().PlayOneShot(speedSound); }
                     if (other.gameObject.GetComponent<CharacterMovement>())
                     {
-                        other.gameObject.GetComponent<CharacterMovement>().SS(10f);
+                        other.gameObject.GetComponent<CharacterMovement>().SS(5f);
                     }
                     break;
                 case PichUpType.Upgrade:
+                    if (other.gameObject.GetComponent<AudioSource>()) { other.gameObject.GetComponent<AudioSource>().PlayOneShot(pointSound); }
                     if (other.gameObject.GetComponent<PlayerHealth>())
                     {
 

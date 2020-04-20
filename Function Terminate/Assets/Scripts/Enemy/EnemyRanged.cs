@@ -6,7 +6,7 @@ using System.Collections;
 public class EnemyRanged : Enemy
 {
 
-    private AudioSource audio;
+    //private AudioSource audio;
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
@@ -14,14 +14,13 @@ public class EnemyRanged : Enemy
     float AttackRate = 1f;
     float StartAttackRate;
     public GameObject Projectile;
-
+    private bool hit = false;
     [SerializeField] private GameObject[] lootObjs;
 
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        audio = GetComponent<AudioSource>();
         // the agent doesn't slow down as it
         // approaches a destination point).
         agent.autoBraking = false;
@@ -31,6 +30,9 @@ public class EnemyRanged : Enemy
         Target = GameObject.FindGameObjectWithTag("player").transform;
         DetectionDistance = 40;
         StoppingDistance = 20;
+        Audio = GetComponent<AudioSource>();
+        Damage = 25;
+        Hp=75;
     }
 
 
@@ -56,14 +58,20 @@ public class EnemyRanged : Enemy
     public override void TakeDamage(float Damage)
     {
         Hp -= Damage;
+        
         if (IsDead())
         {
-
+            AudioSource.PlayClipAtPoint(DeathSound,this.gameObject.transform.position);
             Dice dice = Dice.Get_Instance();
             int random = dice.Next(1, lootObjs.Length);
             Vector3 i = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
             GameObject lootobj = Instantiate(lootObjs[random], i, Quaternion.identity);
             Destroy(this.gameObject);
+        }
+        if (DamageSounds.Length > 0)
+        {
+            int snd = Random.Range(0, DamageSounds.Length);
+            Audio.PlayOneShot(DamageSounds[snd]);
         }
     }
 
@@ -74,8 +82,15 @@ public class EnemyRanged : Enemy
 
     protected override void Move()
     {
-        if (Vector3.Distance(transform.position, Target.position) <= DetectionDistance)
+        if (Vector3.Distance(transform.position, Target.position) <= DetectionDistance || hit)
+        {
             HasDetected = true;
+        }
+        else
+        {
+            HasDetected = false;
+        }
+
 
 
         if (HasDetected)
@@ -118,7 +133,7 @@ public class EnemyRanged : Enemy
         if (Time.time > StartAttackRate)
         {
             GameObject newProjectile = Instantiate(Projectile, transform.position, Quaternion.identity);
-            audio.Play();
+            Audio.Play();
             newProjectile.transform.LookAt(Target.transform);
             newProjectile.GetComponent<StraightProjectile>().SetDamage(Damage);
             StartAttackRate = Time.time + AttackRate;

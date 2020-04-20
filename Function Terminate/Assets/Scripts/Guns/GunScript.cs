@@ -7,11 +7,13 @@ public class GunScript : GunFactory
     [SerializeField] private Camera playerCamera;  
     //[SerializeField] private GameObject barrel;
     [SerializeField] private GameObject Beam;
-
+    private bool firing = false;
+    private AudioSource audio;
     private void Start()
     {
+        audio = GetComponent<AudioSource>();
         Range = 15f;
-        Damage = 10f;
+        Damage = 25f;
         Ammo = 1000;
         
     }
@@ -19,7 +21,7 @@ public class GunScript : GunFactory
     protected override void Shoot( )
     {
         RaycastHit hit;
-        
+        audio.Play();
         //Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward*Range, Color.red, 5f);
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, Range))
         {
@@ -91,17 +93,23 @@ public class GunScript : GunFactory
     }
     void Update()
     {
-        if (Input.GetButton("Fire1") && Ammo >= 0)
+        if ((Input.GetButton("Fire1") || InputManager.R2()) && Ammo > 0)
         {
             Beam.SetActive(true);
-            InvokeRepeating("Shoot", 0f, .5f);
-            //Shoot();
-            Invoke("DecreaseAmmo", 1f);
+            if (!firing)
+            {
+                InvokeRepeating("Shoot", 0f, .5f);
+                firing = true;
+                //Shoot();
+                InvokeRepeating("DecreaseAmmo",0f, 0.5f);
+            }
            
 
         }
         else
         {
+            firing = false;
+            audio.Stop();
             CancelInvoke("Shoot");
             Beam.SetActive(false);
             CancelInvoke("DecreaseAmmo");

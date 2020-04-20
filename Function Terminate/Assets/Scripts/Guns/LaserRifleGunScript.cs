@@ -13,11 +13,13 @@ public class LaserRifleGunScript : GunFactory
     [SerializeField] private LayerMask layerEnemy;
     [SerializeField] private LayerMask layerGround;
 
+    private AudioSource audio;
+
     private bool canFire = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
         laser.enabled = false;
     }
 
@@ -25,7 +27,7 @@ public class LaserRifleGunScript : GunFactory
     void Update()
     {
         laser.SetPosition(0, barrelEdge.transform.position);
-        if (Input.GetButtonDown("Fire1") && Ammo > 0)
+        if ((Input.GetButtonDown("Fire1") || InputManager.R2()) && Ammo > 0)
         {
             Shoot();
         }
@@ -34,7 +36,8 @@ public class LaserRifleGunScript : GunFactory
 
     protected override void Shoot()
     {
-        Ammo -= 2;
+        audio.Play();
+        Ammo -= 1;
         Ray ray;
         ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         RaycastHit hit;

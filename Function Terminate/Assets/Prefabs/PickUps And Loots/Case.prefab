@@ -47,13 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammount: 0
   type: 0
-  lootObjs:
-  - {fileID: 6035061924378689426, guid: ea1f0b78f9f430343b3bb35d440132d7, type: 3}
-  - {fileID: 8933294389934135657, guid: 87541d5c1e9012f44aef933f7004755a, type: 3}
-  - {fileID: 7104375483314156182, guid: 883dc8f9b68876b4fb542dc0f4ddfebf, type: 3}
-  - {fileID: 6569808848576293350, guid: 5eb88f5e29c48f4438913e8cb679e27f, type: 3}
-  - {fileID: 4154697993947379786, guid: 5bcc681eb72e91347ad4eaf3383ce6ae, type: 3}
-  - {fileID: 4109117100636016136, guid: 986434f343e4a8d4e9a5a094fd6e751a, type: 3}
+  ammoSound: {fileID: 8300000, guid: 8f7fabd2e4b34f0419fee8f1219e311d, type: 3}
+  pointSound: {fileID: 8300000, guid: e018b8b2eaaf150489c76958a38bb53f, type: 3}
+  speedSound: {fileID: 8300000, guid: faac98c4c05f2704cba204e0a6ac7e97, type: 3}
 --- !u!65 &273292470941555293
 BoxCollider:
   m_ObjectHideFlags: 0

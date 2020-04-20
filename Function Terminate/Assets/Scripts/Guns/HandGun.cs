@@ -8,19 +8,21 @@ public class HandGun : GunFactory
     [SerializeField] Camera cam;
     [SerializeField] private GameObject impact;
     private Animator anim;
+    private AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
         Ammo = 50;
         Range = 50f;
-        Damage = 15f;
+        Damage = 25f;
         anim = gameObject.GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Ammo > 0)
+        if ((Input.GetButtonDown("Fire1") || InputManager.R2()) && Ammo > 0)
         {
             Shoot();
         }
@@ -30,12 +32,13 @@ public class HandGun : GunFactory
     {
         RaycastHit hit;
         Ammo--;
-
+        anim.Play("tilt");
+        audio.Play();
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Range))
         {
             Debug.Log("Hit " + hit.transform.name);
             //anim.SetTrigger("tilt");
-            anim.Play("tilt");
+            
             if (hit.collider.gameObject.tag == "Enemy")
             {
                 if (hit.collider.gameObject.GetComponent<Enemy>())

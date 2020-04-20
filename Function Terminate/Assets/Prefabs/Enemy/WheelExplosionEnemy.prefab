@@ -91,6 +91,8 @@ GameObject:
   - component: {fileID: 7344484522803044761}
   - component: {fileID: 6320895167729354107}
   - component: {fileID: 9103354861609639376}
+  - component: {fileID: 1827919804451554036}
+  - component: {fileID: 5580058009920866413}
   m_Layer: 12
   m_Name: WheelExplosionEnemy
   m_TagString: Enemy
@@ -147,7 +149,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd002ae0e80e85479c8ff276350040a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageSounds:
+  - {fileID: 8300000, guid: b8299ee1ee8461c4480b10b40f16cfb6, type: 3}
+  - {fileID: 8300000, guid: d011006b7f42a0b4f82738da2ef3858b, type: 3}
+  - {fileID: 8300000, guid: 4293dc79b0ddb9d498a1195eb30a55fa, type: 3}
+  - {fileID: 8300000, guid: c08bebace24b68a47bb945bbf3bcbcee, type: 3}
+  attackSound: {fileID: 8300000, guid: 5e4b6f66499073d43af1110904bb1638, type: 3}
+  deathSound: {fileID: 8300000, guid: aac21ac94db659b4d8abcd871e50d255, type: 3}
   hp: 0
+  damage: 0
   explosionEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
     type: 3}
   lootObjs:
@@ -166,10 +176,120 @@ SphereCollider:
   m_GameObject: {fileID: 3096096864664111606}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1.0990868
   m_Center: {x: -0.1323564, y: 0.13235644, z: 0}
+--- !u!82 &1827919804451554036
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096096864664111606}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -4541537467320707444, guid: 59b5410fa60beee4f870eb52f5bc17cc,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &5580058009920866413
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096096864664111606}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8488679, y: 1.8488679, z: 2.4742765}
+  m_Center: {x: 0.02233851, y: 0, z: -0.0010621548}
 --- !u!1 &3096096865399058244
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +400,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 3
 --- !u!1 &3096096865424460074
 GameObject:

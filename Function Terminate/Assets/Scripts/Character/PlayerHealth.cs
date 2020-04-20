@@ -10,13 +10,14 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float currentHealthPoints = 475;
     [SerializeField] private float defence = 0;
 
-
+    private AudioSource audio;
+    [SerializeField] private AudioClip damageSound,healSound;
     public float MaxHealthPoint { get => maxHealthPoint; set => maxHealthPoint = value; }
     public float CurrentHealthPoints { get => currentHealthPoints; set => currentHealthPoints = value; }
 
 
     public void TakeDamage(float damage) {
-        
+        audio.PlayOneShot(damageSound);
         if (defence > 0)
         {
             defence -= damage;
@@ -37,6 +38,8 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void AddHealth(int healing) {
+        audio.clip = healSound;
+        audio.Play();
         if ((CurrentHealthPoints += healing) > MaxHealthPoint) {
             CurrentHealthPoints = MaxHealthPoint;
         }
@@ -44,6 +47,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void AddDefence(int def)
     {
+        audio.clip = healSound;
+        audio.Play();
         defence += def;
     }
 
@@ -55,7 +60,8 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        manager = GameManager.instance;    
+        manager = GameManager.instance;
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

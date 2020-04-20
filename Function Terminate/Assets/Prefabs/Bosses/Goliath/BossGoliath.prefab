@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2254495717482931155}
   m_Layer: 12
   m_Name: LeftThumbProximal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 622316297343910128}
   m_Layer: 12
   m_Name: RightLittleProximal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 985292314385516415}
   m_Layer: 12
   m_Name: RightMiddleIntermediate
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,9 +102,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 770587618342104289}
+  - component: {fileID: 9121944135553896061}
   m_Layer: 12
   m_Name: RightHand
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,6 +129,19 @@ Transform:
   m_Father: {fileID: 5679927030033639530}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &9121944135553896061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370012141426515626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10619001, y: 0.03202796, z: 0.0714891}
+  m_Center: {x: 0.052667838, y: 0.0010986674, z: 0.008492737}
 --- !u!1 &462515705116394896
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +154,7 @@ GameObject:
   - component: {fileID: 590028068645747110}
   m_Layer: 12
   m_Name: LeftHand
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +202,7 @@ GameObject:
   - component: {fileID: 7243748566793889415}
   m_Layer: 12
   m_Name: Root
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,7 +327,7 @@ GameObject:
   - component: {fileID: 590028067323864590}
   m_Layer: 12
   m_Name: LeftArmIkHint
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +358,7 @@ GameObject:
   - component: {fileID: 590028067420749892}
   m_Layer: 12
   m_Name: RightFirePoint
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -392,7 +406,7 @@ GameObject:
   - component: {fileID: 590028067927671013}
   m_Layer: 12
   m_Name: LeftFirePoint
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,7 +454,7 @@ GameObject:
   - component: {fileID: 590028068043105511}
   m_Layer: 12
   m_Name: HeadCollider
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,7 +498,7 @@ GameObject:
   - component: {fileID: 590028068052036532}
   m_Layer: 12
   m_Name: RotationIKReference
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -529,7 +543,7 @@ GameObject:
   - component: {fileID: 590028068067489216}
   m_Layer: 12
   m_Name: TargetRotation
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -755,7 +769,7 @@ GameObject:
   - component: {fileID: 590028068595069957}
   m_Layer: 12
   m_Name: RightArkIKHint
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -831,7 +845,7 @@ GameObject:
   - component: {fileID: 6808006150514030306}
   m_Layer: 12
   m_Name: LeftRingProximal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -862,7 +876,7 @@ GameObject:
   - component: {fileID: 6629531282555113441}
   m_Layer: 12
   m_Name: RightThumbProximal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -893,7 +907,7 @@ GameObject:
   - component: {fileID: 1707782159680121772}
   m_Layer: 12
   m_Name: RightLittleIntermediate
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -924,7 +938,7 @@ GameObject:
   - component: {fileID: 3857281670888052004}
   m_Layer: 12
   m_Name: RightUpperLeg
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -955,7 +969,7 @@ GameObject:
   - component: {fileID: 2460771323434809289}
   m_Layer: 12
   m_Name: RightFoot
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -987,7 +1001,7 @@ GameObject:
   - component: {fileID: 590028068582828522}
   m_Layer: 12
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1031,7 +1045,7 @@ GameObject:
   - component: {fileID: 846916944738333498}
   m_Layer: 12
   m_Name: RightRingDistal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1059,9 +1073,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4763357861617696847}
+  - component: {fileID: 1822123856958512807}
   m_Layer: 12
   m_Name: RightUpperArm
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1082,6 +1097,19 @@ Transform:
   m_Father: {fileID: 2160897244763531756}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1822123856958512807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2557612504571306224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2714764, y: 0.11898971, z: 0.12747264}
+  m_Center: {x: 0.13049467, y: -0.0071912385, z: -0.020317359}
 --- !u!1 &2664788083134551780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +1121,7 @@ GameObject:
   - component: {fileID: 1905712346163573159}
   m_Layer: 12
   m_Name: LeftMiddleProximal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1124,7 +1152,7 @@ GameObject:
   - component: {fileID: 6484503713782490156}
   m_Layer: 12
   m_Name: LeftUpperLeg
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1155,7 +1183,7 @@ GameObject:
   - component: {fileID: 1489402686438385818}
   m_Layer: 12
   m_Name: RightThumbDistal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1185,7 +1213,7 @@ GameObject:
   - component: {fileID: 7449027988533771899}
   m_Layer: 12
   m_Name: RightLowerLeg
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1216,7 +1244,7 @@ GameObject:
   - component: {fileID: 5325677206730562913}
   m_Layer: 12
   m_Name: LeftLowerLeg
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1245,9 +1273,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5679927030033639530}
+  - component: {fileID: 2243857669191878280}
   m_Layer: 12
   m_Name: RightLowerArm
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1268,6 +1297,19 @@ Transform:
   m_Father: {fileID: 4763357861617696847}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2243857669191878280
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3134958442491755586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.26197678, y: 0.06933556, z: 0.07120487}
+  m_Center: {x: 0.13034286, y: -0.0042375564, z: -0.001294918}
 --- !u!1 &3726888979963230810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,7 +1321,7 @@ GameObject:
   - component: {fileID: 2577080840589906424}
   m_Layer: 12
   m_Name: RightIndexIntermediate
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1310,7 +1352,7 @@ GameObject:
   - component: {fileID: 3415094971329138949}
   m_Layer: 12
   m_Name: LeftIndexProximal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1341,7 +1383,7 @@ GameObject:
   - component: {fileID: 8619075957309562814}
   m_Layer: 12
   m_Name: RightIndexProximal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1511,7 +1553,7 @@ GameObject:
   - component: {fileID: 2474928472238971597}
   m_Layer: 12
   m_Name: LeftLittleProximal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1542,7 +1584,7 @@ GameObject:
   - component: {fileID: 8789795543207293801}
   m_Layer: 12
   m_Name: BH_2_
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1577,7 +1619,7 @@ GameObject:
   - component: {fileID: 8205820352519438720}
   m_Layer: 12
   m_Name: LeftLittleIntermediate
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1638,7 +1680,7 @@ GameObject:
   - component: {fileID: 5644881397018524915}
   m_Layer: 12
   m_Name: LeftMiddleDistal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1668,7 +1710,7 @@ GameObject:
   - component: {fileID: 7650950614805901948}
   m_Layer: 12
   m_Name: RightIndexDistal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1836,7 +1878,7 @@ GameObject:
   - component: {fileID: 286707879175357466}
   m_Layer: 12
   m_Name: RightMiddleDistal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1866,7 +1908,7 @@ GameObject:
   - component: {fileID: 8892740656478121272}
   m_Layer: 12
   m_Name: LeftLittleDistal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1896,7 +1938,7 @@ GameObject:
   - component: {fileID: 3751115734634462343}
   m_Layer: 12
   m_Name: Hips
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1930,7 +1972,7 @@ GameObject:
   - component: {fileID: 2166797175746832505}
   m_Layer: 12
   m_Name: LeftIndexDistal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2128,7 +2170,7 @@ GameObject:
   - component: {fileID: 5700657159422922423}
   m_Layer: 12
   m_Name: LeftRingIntermediate
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2160,7 +2202,7 @@ GameObject:
   - component: {fileID: 590028066658493383}
   m_Layer: 12
   m_Name: LeftUpperArm
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2205,7 +2247,7 @@ GameObject:
   - component: {fileID: 5761303515502328775}
   m_Layer: 12
   m_Name: RightRingIntermediate
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2236,7 +2278,7 @@ GameObject:
   - component: {fileID: 9135924769258707474}
   m_Layer: 12
   m_Name: Neck
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2267,7 +2309,7 @@ GameObject:
   - component: {fileID: 262655046139446065}
   m_Layer: 12
   m_Name: UpperChest
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2301,7 +2343,7 @@ GameObject:
   - component: {fileID: 590028068578234451}
   m_Layer: 12
   m_Name: LeftLowerArm
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2346,7 +2388,7 @@ GameObject:
   - component: {fileID: 8449570087798533502}
   m_Layer: 12
   m_Name: RightLittleDistal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2376,7 +2418,7 @@ GameObject:
   - component: {fileID: 3111638162185322281}
   m_Layer: 12
   m_Name: LeftRingDistal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2406,7 +2448,7 @@ GameObject:
   - component: {fileID: 2618823765418546636}
   m_Layer: 12
   m_Name: LeftThumbIntermediate
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2437,7 +2479,7 @@ GameObject:
   - component: {fileID: 2716474265873996034}
   m_Layer: 12
   m_Name: RightRingProximal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2468,7 +2510,7 @@ GameObject:
   - component: {fileID: 8960402947975865396}
   m_Layer: 12
   m_Name: LeftIndexIntermediate
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2529,7 +2571,7 @@ GameObject:
   - component: {fileID: 7340763992266994902}
   m_Layer: 12
   m_Name: LeftThumbDistal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2559,7 +2601,7 @@ GameObject:
   - component: {fileID: 7101032936942409265}
   m_Layer: 12
   m_Name: LeftFoot
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2590,7 +2632,7 @@ GameObject:
   - component: {fileID: 2834452565063586284}
   m_Layer: 12
   m_Name: RightThumbIntermediate
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2621,7 +2663,7 @@ GameObject:
   - component: {fileID: 6970223465848177909}
   m_Layer: 12
   m_Name: RightMiddleProximal
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2652,7 +2694,7 @@ GameObject:
   - component: {fileID: 2160897244763531756}
   m_Layer: 12
   m_Name: RightShoulder
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2684,7 +2726,7 @@ GameObject:
   - component: {fileID: 590028066595223507}
   m_Layer: 12
   m_Name: LeftShoulder
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2734,7 +2776,7 @@ GameObject:
   - component: {fileID: 410327504590559129}
   m_Layer: 12
   m_Name: Spine
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2767,6 +2809,7 @@ GameObject:
   - component: {fileID: 590028068564853332}
   - component: {fileID: 590028068564853333}
   - component: {fileID: 590028068564853331}
+  - component: {fileID: 3891010947932396136}
   m_Layer: 12
   m_Name: Head
   m_TagString: WeakSpot
@@ -2781,7 +2824,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8521939220541796849}
-  m_LocalRotation: {x: 0.2743233, y: 0.0000000039726724, z: 0.00061551324, w: 0.9616373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.00001638, y: 0.09719734, z: -0.00048181}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2843,6 +2886,9 @@ MonoBehaviour:
   rateSpecialAttack: 0
   rateNormalAttack: 5
   lookAtWeight: 0.5
+  damageSounds:
+  - {fileID: 8300000, guid: d011006b7f42a0b4f82738da2ef3858b, type: 3}
+  - {fileID: 8300000, guid: 4293dc79b0ddb9d498a1195eb30a55fa, type: 3}
   fireBallPrefab: {fileID: 6639460787656459929, guid: 78fdce679eac8c048953dd62ecb52a09,
     type: 3}
   fireLocations:
@@ -2875,6 +2921,103 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!82 &3891010947932396136
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521939220541796849}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -4541537467320707444, guid: 59b5410fa60beee4f870eb52f5bc17cc,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8658829363751756791
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,7 +3167,7 @@ GameObject:
   - component: {fileID: 4550699042081375980}
   m_Layer: 12
   m_Name: RightToes
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3196,7 +3339,7 @@ GameObject:
   - component: {fileID: 590028068172236999}
   m_Layer: 12
   m_Name: BossGoliath
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3338,7 +3481,7 @@ GameObject:
   - component: {fileID: 6393848738904437939}
   m_Layer: 12
   m_Name: LeftMiddleIntermediate
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3369,7 +3512,7 @@ GameObject:
   - component: {fileID: 1321650765577538362}
   m_Layer: 12
   m_Name: LeftToes
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -20,13 +20,11 @@ public class BossBull : BossBlueprint {
     [SerializeField] private float minDistance = 5f;
     [SerializeField] private float maxDistance = 10f;
 
-    private AudioSource audio;
-
     private void Start()
     {
         BossController = GetComponent<NavMeshAgent>();
         TargetPlayerConstraint = GetComponent<LookAtConstraint>();
-        audio = GetComponent<AudioSource>();
+        Audio = GetComponent<AudioSource>();
         TargetPlayerConstraint.weight = LookAtWeight;
         BossController.speed = Speed;
         IsUsingSpecialAttack = false;
@@ -91,14 +89,14 @@ public class BossBull : BossBlueprint {
         PauseLasers(true);
         if (sounds.Length > 0)
         {
-            audio.clip = sounds[0];
-            audio.Play();
+            Audio.clip = sounds[0];
+            Audio.Play();
         }
         Invoke("ChargeAttack", 3f);
     }
 
     private void ChargeAttack() {
-        audio.Stop();
+        Audio.Stop();
         TargetPlayerConstraint.enabled = false;
         BossController.enabled = true;
         PauseLasers(false);
@@ -224,8 +222,8 @@ public class BossBull : BossBlueprint {
             {
                 if (sounds.Length > 1)
                 {
-                    audio.clip = sounds[1];
-                    audio.Play();
+                    Audio.clip = sounds[1];
+                    Audio.Play();
                 }
                 Stunned();
             }
@@ -254,4 +252,9 @@ public class BossBull : BossBlueprint {
         }
     }
 
+    protected override void CallManager()
+    {
+        manager = GameManager.instance;
+        manager.NextLevel();
+    }
 }
